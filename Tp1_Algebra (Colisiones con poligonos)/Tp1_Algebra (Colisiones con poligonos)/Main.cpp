@@ -17,10 +17,10 @@ void main()
     Vector2 vertices[50];
     int totalVertices = 0;
     Vector2 ballSpeed = { 5.0f, 5.0f };
-    int ballRadius = 20;
+    float ballRadius = 20.0f;
     Color ballColor = RED;
 
-    vector<Vector2> polygonPoints;
+
     bool isDrawingPolygon = false;
 
     SetTargetFPS(60);
@@ -81,8 +81,6 @@ void main()
     }
 
     CloseWindow();
-
-    //return 0;
 }
 
 
