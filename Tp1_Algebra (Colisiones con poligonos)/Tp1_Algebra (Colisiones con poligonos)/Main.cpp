@@ -90,7 +90,7 @@ bool PointInPolygon(Vector2 ballPosition, Vector2 vertices[], int totalVertices)
 
     for (int i = 0, j = totalVertices - 1; i < totalVertices; j = i++)
     {
-        if (((vertices[i].y > ballPosition.y) != (vertices[j].y > ballPosition.y)) && 
+        if (((vertices[i].y > ballPosition.y) != (vertices[j].y > ballPosition.y)) && //ball.y tiene que estar entre y1 e y2 primero
             (ballPosition.x < vertices[j].x + ((ballPosition.y - vertices[j].y) / (vertices[i].y - vertices[j].y)) * (vertices[i].x - vertices[j].x)))
         {
             crossings++;
@@ -99,5 +99,3 @@ bool PointInPolygon(Vector2 ballPosition, Vector2 vertices[], int totalVertices)
 
     return (crossings % 2 == 1);
 }
-
-//ballPosition.x < (vertices[j].x - vertices[i].x) * (ballPosition.y - vertices[i].y) / (vertices[j].y - vertices[i].y) + vertices[i].x))
